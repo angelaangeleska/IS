@@ -1,5 +1,5 @@
+using EShop.Domain;
 using System.Diagnostics;
-using EShop.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EShop.Web.Controllers

@@ -11,11 +11,12 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-EShop.Web-897ad890-5b2f-4d53-815d-bfbee5604fd8")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("EShop.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+393a9ab840246b5afc0f26decc040833fbd38ae2")]
 [assembly: System.Reflection.AssemblyProductAttribute("EShop.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EShop.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

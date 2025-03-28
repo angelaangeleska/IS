@@ -1,0 +1,13 @@
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\bin\Debug\net8.0\EShop.Domain.deps.json
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\bin\Debug\net8.0\EShop.Domain.dll
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\bin\Debug\net8.0\EShop.Domain.pdb
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\obj\Debug\net8.0\EShop.Domain.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\obj\Debug\net8.0\EShop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\obj\Debug\net8.0\EShop.Domain.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\obj\Debug\net8.0\EShop.Domain.AssemblyInfo.cs
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\obj\Debug\net8.0\EShop.Domain.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\obj\Debug\net8.0\EShop.Domain.sourcelink.json
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\obj\Debug\net8.0\EShop.Domain.dll
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\obj\Debug\net8.0\refint\EShop.Domain.dll
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\obj\Debug\net8.0\EShop.Domain.pdb
+C:\Users\user\Desktop\IS\exercises\auditorium_exercises\EShop.Domain\obj\Debug\net8.0\ref\EShop.Domain.dll
