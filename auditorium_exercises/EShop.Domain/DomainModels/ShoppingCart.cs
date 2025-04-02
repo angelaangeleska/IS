@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace EShop.Domain.DomainModels
 {
-    public class ShoppingCart
+    public class ShoppingCart : BaseEntity
     {
-        [Key]
-        public Guid Id { get; set; }
         public string? OwnerId { get; set; }
         public EShopUser? Owner { get; set; }
         public virtual ICollection<ProductInShoppingCart>? Products { get; set; }

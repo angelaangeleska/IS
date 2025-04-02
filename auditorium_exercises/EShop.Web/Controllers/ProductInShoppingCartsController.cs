@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EShop.Domain.DomainModels;
-using EShop.Web.Data;
+using EShop.Repository;
 
 namespace EShop.Web.Controllers
 {
