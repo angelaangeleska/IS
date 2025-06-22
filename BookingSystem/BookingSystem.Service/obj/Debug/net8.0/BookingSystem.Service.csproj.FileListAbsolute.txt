@@ -1,0 +1,11 @@
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\bin\Debug\net8.0\BookingSystem.Service.deps.json
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\bin\Debug\net8.0\BookingSystem.Service.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\bin\Debug\net8.0\BookingSystem.Service.pdb
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\BookingSystem.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\BookingSystem.Service.AssemblyInfoInputs.cache
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\BookingSystem.Service.AssemblyInfo.cs
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\BookingSystem.Service.csproj.CoreCompileInputs.cache
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\BookingSystem.Service.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\refint\BookingSystem.Service.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\BookingSystem.Service.pdb
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\ref\BookingSystem.Service.dll

@@ -1,0 +1,12 @@
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Domain\bin\Debug\net8.0\BookingSystem.Domain.deps.json
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Domain\bin\Debug\net8.0\BookingSystem.Domain.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Domain\bin\Debug\net8.0\BookingSystem.Domain.pdb
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Domain\obj\Debug\net8.0\BookingSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Domain\obj\Debug\net8.0\BookingSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Domain\obj\Debug\net8.0\BookingSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Domain\obj\Debug\net8.0\BookingSystem.Domain.AssemblyInfo.cs
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Domain\obj\Debug\net8.0\BookingSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Domain\obj\Debug\net8.0\BookingSystem.Domain.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Domain\obj\Debug\net8.0\refint\BookingSystem.Domain.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Domain\obj\Debug\net8.0\BookingSystem.Domain.pdb
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Domain\obj\Debug\net8.0\ref\BookingSystem.Domain.dll

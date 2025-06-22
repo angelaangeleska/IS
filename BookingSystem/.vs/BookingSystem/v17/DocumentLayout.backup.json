@@ -1,0 +1,347 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.web\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|solutionrelative:bookingsystem.web\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.web\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|solutionrelative:bookingsystem.web\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDB33D1-17F9-446E-B122-E4F6316E0F1A}|BookingSystem.Repository\\BookingSystem.Repository.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.repository\\migrations\\20250622172139_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDB33D1-17F9-446E-B122-E4F6316E0F1A}|BookingSystem.Repository\\BookingSystem.Repository.csproj|solutionrelative:bookingsystem.repository\\migrations\\20250622172139_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDB33D1-17F9-446E-B122-E4F6316E0F1A}|BookingSystem.Repository\\BookingSystem.Repository.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.repository\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDB33D1-17F9-446E-B122-E4F6316E0F1A}|BookingSystem.Repository\\BookingSystem.Repository.csproj|solutionrelative:bookingsystem.repository\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDB33D1-17F9-446E-B122-E4F6316E0F1A}|BookingSystem.Repository\\BookingSystem.Repository.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.repository\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDB33D1-17F9-446E-B122-E4F6316E0F1A}|BookingSystem.Repository\\BookingSystem.Repository.csproj|solutionrelative:bookingsystem.repository\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CD8174E-FCBA-4046-9F41-BC264E919F04}|BookingSystem.Domain\\BookingSystem.Domain.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.domain\\identitymodels\\systemuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CD8174E-FCBA-4046-9F41-BC264E919F04}|BookingSystem.Domain\\BookingSystem.Domain.csproj|solutionrelative:bookingsystem.domain\\identitymodels\\systemuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CD8174E-FCBA-4046-9F41-BC264E919F04}|BookingSystem.Domain\\BookingSystem.Domain.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.domain\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CD8174E-FCBA-4046-9F41-BC264E919F04}|BookingSystem.Domain\\BookingSystem.Domain.csproj|solutionrelative:bookingsystem.domain\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.web\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|solutionrelative:bookingsystem.web\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CD8174E-FCBA-4046-9F41-BC264E919F04}|BookingSystem.Domain\\BookingSystem.Domain.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.domain\\domainmodels\\reservation .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CD8174E-FCBA-4046-9F41-BC264E919F04}|BookingSystem.Domain\\BookingSystem.Domain.csproj|solutionrelative:bookingsystem.domain\\domainmodels\\reservation .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDB33D1-17F9-446E-B122-E4F6316E0F1A}|BookingSystem.Repository\\BookingSystem.Repository.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.repository\\migrations\\00000000000000_createidentityschema.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDB33D1-17F9-446E-B122-E4F6316E0F1A}|BookingSystem.Repository\\BookingSystem.Repository.csproj|solutionrelative:bookingsystem.repository\\migrations\\00000000000000_createidentityschema.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|solutionrelative:bookingsystem.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDB33D1-17F9-446E-B122-E4F6316E0F1A}|BookingSystem.Repository\\BookingSystem.Repository.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.repository\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDB33D1-17F9-446E-B122-E4F6316E0F1A}|BookingSystem.Repository\\BookingSystem.Repository.csproj|solutionrelative:bookingsystem.repository\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDB33D1-17F9-446E-B122-E4F6316E0F1A}|BookingSystem.Repository\\BookingSystem.Repository.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.repository\\migrations\\00000000000000_createidentityschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDB33D1-17F9-446E-B122-E4F6316E0F1A}|BookingSystem.Repository\\BookingSystem.Repository.csproj|solutionrelative:bookingsystem.repository\\migrations\\00000000000000_createidentityschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.web\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|solutionrelative:bookingsystem.web\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.web\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|solutionrelative:bookingsystem.web\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.web\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|solutionrelative:bookingsystem.web\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|solutionrelative:bookingsystem.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A98029F4-209A-44F3-9B1D-EEBB9150DCF7}|BookingSystem.Web\\BookingSystem.Web.csproj|solutionrelative:bookingsystem.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CD8174E-FCBA-4046-9F41-BC264E919F04}|BookingSystem.Domain\\BookingSystem.Domain.csproj|c:\\users\\angela a\\desktop\\bookingis\\bookingsystem\\bookingsystem.domain\\domainmodels\\accommodation .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CD8174E-FCBA-4046-9F41-BC264E919F04}|BookingSystem.Domain\\BookingSystem.Domain.csproj|solutionrelative:bookingsystem.domain\\domainmodels\\accommodation .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SystemUser.cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Domain\\IdentityModels\\SystemUser.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Domain\\IdentityModels\\SystemUser.cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Domain\\IdentityModels\\SystemUser.cs",
+              "RelativeToolTip": "BookingSystem.Domain\\IdentityModels\\SystemUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T17:28:30.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "BookingSystem.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAcwIEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T17:27:09.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "BookingSystem.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "BookingSystem.Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAACHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T17:27:00.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Domain\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Domain\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Domain\\ErrorViewModel.cs",
+              "RelativeToolTip": "BookingSystem.Domain\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T17:01:15.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Repository\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\ApplicationDbContext.cs",
+              "RelativeToolTip": "BookingSystem.Repository\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T17:07:27.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\ApplicationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Repository\\ApplicationDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\ApplicationDbContextFactory.cs",
+              "RelativeToolTip": "BookingSystem.Repository\\ApplicationDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T17:11:59.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20250622172139_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\Migrations\\20250622172139_InitialMigration.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Repository\\Migrations\\20250622172139_InitialMigration.cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\Migrations\\20250622172139_InitialMigration.cs",
+              "RelativeToolTip": "BookingSystem.Repository\\Migrations\\20250622172139_InitialMigration.cs",
+              "ViewState": "AgIAANAAAAAAAAAAAAAAwO8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T17:21:39.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "BookingSystem.Web\\ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "BookingSystem.Web\\ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-06-22T17:26:50.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Reservation .cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Domain\\DomainModels\\Reservation .cs",
+              "RelativeDocumentMoniker": "BookingSystem.Domain\\DomainModels\\Reservation .cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Domain\\DomainModels\\Reservation .cs",
+              "RelativeToolTip": "BookingSystem.Domain\\DomainModels\\Reservation .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T17:21:27.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "00000000000000_CreateIdentitySchema.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Repository\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
+              "RelativeToolTip": "BookingSystem.Repository\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T17:09:49.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Repository\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "BookingSystem.Repository\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T17:08:41.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "00000000000000_CreateIdentitySchema.cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Repository\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "RelativeToolTip": "BookingSystem.Repository\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T17:08:31.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "BookingSystem.Web\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "BookingSystem.Web\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T17:04:44.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "BookingSystem.Web\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "BookingSystem.Web\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T17:02:17.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "BookingSystem.Web\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "BookingSystem.Web\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T17:02:04.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "BookingSystem.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T17:01:30.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Program.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\Program.cs",
+              "RelativeToolTip": "BookingSystem.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T16:51:08.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "BookingSystem.Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Web\\appsettings.json",
+              "RelativeToolTip": "BookingSystem.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-22T16:50:28.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Accommodation .cs",
+              "DocumentMoniker": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Domain\\DomainModels\\Accommodation .cs",
+              "RelativeDocumentMoniker": "BookingSystem.Domain\\DomainModels\\Accommodation .cs",
+              "ToolTip": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Domain\\DomainModels\\Accommodation .cs",
+              "RelativeToolTip": "BookingSystem.Domain\\DomainModels\\Accommodation .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T16:33:14.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
