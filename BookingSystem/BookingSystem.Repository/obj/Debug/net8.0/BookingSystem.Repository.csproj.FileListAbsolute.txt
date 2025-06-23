@@ -13,3 +13,4 @@ C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Repository\obj\D
 C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Repository\bin\Debug\net8.0\BookingSystem.Domain.dll
 C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Repository\bin\Debug\net8.0\BookingSystem.Domain.pdb
 C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Repository\obj\Debug\net8.0\BookingS.E00D49E6.Up2Date
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Repository\obj\Debug\net8.0\BookingSystem.Repository.sourcelink.json

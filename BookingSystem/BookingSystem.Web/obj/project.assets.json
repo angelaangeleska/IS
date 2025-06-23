@@ -3194,6 +3194,20 @@
         "runtime": {
           "bin/placeholder/BookingSystem.Repository.dll": {}
         }
+      },
+      "BookingSystem.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "BookingSystem.Domain": "1.0.0",
+          "BookingSystem.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BookingSystem.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookingSystem.Service.dll": {}
+        }
       }
     }
   },
@@ -8627,12 +8641,18 @@
       "type": "project",
       "path": "../BookingSystem.Repository/BookingSystem.Repository.csproj",
       "msbuildProject": "../BookingSystem.Repository/BookingSystem.Repository.csproj"
+    },
+    "BookingSystem.Service/1.0.0": {
+      "type": "project",
+      "path": "../BookingSystem.Service/BookingSystem.Service.csproj",
+      "msbuildProject": "../BookingSystem.Service/BookingSystem.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "BookingSystem.Domain >= 1.0.0",
       "BookingSystem.Repository >= 1.0.0",
+      "BookingSystem.Service >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 8.0.17",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.17",
       "Microsoft.AspNetCore.Identity.UI >= 8.0.17",
@@ -8680,6 +8700,9 @@
             },
             "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\BookingSystem.Repository.csproj": {
               "projectPath": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Repository\\BookingSystem.Repository.csproj"
+            },
+            "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Service\\BookingSystem.Service.csproj": {
+              "projectPath": "C:\\Users\\Angela A\\Desktop\\BookingIS\\BookingSystem\\BookingSystem.Service\\BookingSystem.Service.csproj"
             }
           }
         }

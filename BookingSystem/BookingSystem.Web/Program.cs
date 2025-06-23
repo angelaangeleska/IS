@@ -1,5 +1,9 @@
 using BookingSystem.Domain.IdentityModels;
 using BookingSystem.Repository;
+using BookingSystem.Repository.Implementation;
+using BookingSystem.Repository.Interface;
+using BookingSystem.Service.Implementation;
+using BookingSystem.Service.Interface;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +18,13 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<SystemUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+builder.Services.AddTransient<IAccommodationService, AccommodationService>();
+builder.Services.AddTransient<ICityService, CityService>();
+builder.Services.AddTransient<ICountryService, CountryService>();
+builder.Services.AddTransient<IReservationService, ReservationService>();
 
 var app = builder.Build();
 

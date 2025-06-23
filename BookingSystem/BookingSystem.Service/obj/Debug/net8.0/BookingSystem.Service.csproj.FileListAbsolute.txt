@@ -9,3 +9,10 @@ C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debu
 C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\refint\BookingSystem.Service.dll
 C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\BookingSystem.Service.pdb
 C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\ref\BookingSystem.Service.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\bin\Debug\net8.0\BookingSystem.Domain.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\bin\Debug\net8.0\BookingSystem.Repository.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\bin\Debug\net8.0\BookingSystem.Domain.pdb
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\bin\Debug\net8.0\BookingSystem.Repository.pdb
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\BookingSystem.Service.csproj.AssemblyReference.cache
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\BookingSystem.Service.sourcelink.json
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Service\obj\Debug\net8.0\BookingS.66E86F95.Up2Date
