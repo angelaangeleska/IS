@@ -1,4 +1,5 @@
 ﻿using BookingSystem.Domain.DomainModels;
+using BookingSystem.Repository.Implementation;
 using BookingSystem.Repository.Interface;
 using BookingSystem.Service.Interface;
 using System;
@@ -44,6 +45,14 @@ namespace BookingSystem.Service.Implementation
         {
             country.Id = Guid.NewGuid();
             return _countryRepository.Insert(country);
+        }
+
+        public void InsertMany(IEnumerable<Country> countries)
+        {
+            foreach (var country in countries)
+            {
+                _countryRepository.Insert(country);
+            }
         }
 
         public Country Update(Country country)

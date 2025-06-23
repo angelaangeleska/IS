@@ -313,3 +313,9 @@ C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Web\bin\Debug\ne
 C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Web\obj\Debug\net8.0\BookingSystem.Web.sourcelink.json
 C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Web\bin\Debug\net8.0\BookingSystem.Service.dll
 C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Web\bin\Debug\net8.0\BookingSystem.Service.pdb
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Web\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Web\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Web\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Web\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Web\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Angela A\Desktop\BookingIS\BookingSystem\BookingSystem.Web\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll

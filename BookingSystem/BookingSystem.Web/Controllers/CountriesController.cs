@@ -1,5 +1,6 @@
 ﻿using BookingSystem.Domain.DomainModels;
 using BookingSystem.Repository;
+using BookingSystem.Service.Implementation;
 using BookingSystem.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -7,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace BookingSystem.Web.Controllers
@@ -15,10 +15,12 @@ namespace BookingSystem.Web.Controllers
     public class CountriesController : Controller
     {
         private readonly ICountryService _countryService;
+        private readonly IDataFetchService _dataFetchService;
 
-        public CountriesController(ICountryService countryService)
+        public CountriesController(ICountryService countryService, IDataFetchService dataFetchService)
         {
             _countryService = countryService;
+            _dataFetchService = dataFetchService;
         }
 
         // GET: Countries
@@ -50,7 +52,7 @@ namespace BookingSystem.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("Name,OfficialName,Capital,FlagUrl,CurrencyName,CurrencySymbol,Language")] Country country)
+        public IActionResult Create([Bind("Name,CurrencyName,Code")] Country country)
         {
             if (ModelState.IsValid)
             {
@@ -61,7 +63,7 @@ namespace BookingSystem.Web.Controllers
         }
 
         // GET: Countries/Edit/5
-        public IActionResult Edit(Guid id)
+        public ActionResult Edit(Guid id)
         {
             var country = _countryService.GetById(id);
             if (country == null)
@@ -76,7 +78,7 @@ namespace BookingSystem.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Guid id, [Bind("Name,OfficialName,Capital,FlagUrl,CurrencyName,CurrencySymbol,Language,Id")] Country country)
+        public IActionResult Edit(Guid id, [Bind("Name,CurrencyName,Code,Id")] Country country)
         {
             if (id != country.Id)
             {
@@ -105,6 +107,12 @@ namespace BookingSystem.Web.Controllers
         public IActionResult DeleteConfirmed(Guid id)
         {
             _countryService.DeleteById(id);
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> FetchCountries()
+        {
+            await _dataFetchService.FetchCountriesFromApi();
             return RedirectToAction(nameof(Index));
         }
 

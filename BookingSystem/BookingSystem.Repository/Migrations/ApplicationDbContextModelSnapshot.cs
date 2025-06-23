@@ -99,25 +99,13 @@ namespace BookingSystem.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Capital")
+                    b.Property<string>("Code")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CurrencyName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CurrencySymbol")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FlagUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Language")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OfficialName")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -379,7 +367,7 @@ namespace BookingSystem.Repository.Migrations
             modelBuilder.Entity("BookingSystem.Domain.DomainModels.City", b =>
                 {
                     b.HasOne("BookingSystem.Domain.DomainModels.Country", "Country")
-                        .WithMany("Cities")
+                        .WithMany()
                         .HasForeignKey("CountryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -463,11 +451,6 @@ namespace BookingSystem.Repository.Migrations
             modelBuilder.Entity("BookingSystem.Domain.DomainModels.City", b =>
                 {
                     b.Navigation("Accommodations");
-                });
-
-            modelBuilder.Entity("BookingSystem.Domain.DomainModels.Country", b =>
-                {
-                    b.Navigation("Cities");
                 });
 
             modelBuilder.Entity("BookingSystem.Domain.IdentityModels.SystemUser", b =>

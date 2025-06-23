@@ -12,6 +12,7 @@ namespace BookingSystem.Service.Interface
         List<Country> GetAll();
         Country? GetById(Guid id);
         Country Insert(Country country);
+        void InsertMany(IEnumerable<Country> countries);
         Country Update(Country country);
         Country DeleteById(Guid id);
     }

@@ -25,6 +25,9 @@ builder.Services.AddTransient<IAccommodationService, AccommodationService>();
 builder.Services.AddTransient<ICityService, CityService>();
 builder.Services.AddTransient<ICountryService, CountryService>();
 builder.Services.AddTransient<IReservationService, ReservationService>();
+builder.Services.AddTransient<IDataFetchService, DataFetchService>();
+
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
