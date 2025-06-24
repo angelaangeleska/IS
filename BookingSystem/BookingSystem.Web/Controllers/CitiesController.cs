@@ -1,5 +1,6 @@
 ﻿using BookingSystem.Domain.DomainModels;
 using BookingSystem.Repository;
+using BookingSystem.Service.Implementation;
 using BookingSystem.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -15,10 +16,12 @@ namespace BookingSystem.Web.Controllers
     public class CitiesController : Controller
     {
         private readonly ICityService _cityService;
+        private readonly IDataFetchService _dataFetchService;
 
-        public CitiesController(ICityService cityService)
+        public CitiesController(ICityService cityService, IDataFetchService dataFetchService)
         {
             _cityService = cityService;
+            _dataFetchService = dataFetchService;
         }
 
         // GET: Cities
@@ -105,6 +108,13 @@ namespace BookingSystem.Web.Controllers
         public IActionResult DeleteConfirmed(Guid id)
         {
             _cityService.DeleteById(id);
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> FetchCities()
+        {
+            await _dataFetchService.FetchCitiesFromApi();
             return RedirectToAction(nameof(Index));
         }
 

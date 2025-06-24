@@ -1,6 +1,7 @@
 ﻿using BookingSystem.Domain.DomainModels;
 using BookingSystem.Repository.Interface;
 using BookingSystem.Service.Interface;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace BookingSystem.Service.Implementation
 
         public List<City> GetAll()
         {
-            return _cityRepository.GetAll(selector: x => x).ToList();
+            return _cityRepository.GetAll(selector: x => x, include: query => query.Include(y => y.Country)).ToList();
         }
 
         public City? GetById(Guid id)
@@ -44,6 +45,14 @@ namespace BookingSystem.Service.Implementation
         {
             city.Id = Guid.NewGuid();
             return _cityRepository.Insert(city);
+        }
+
+        public void InsertMany(IEnumerable<City> cities)
+        {
+            foreach (var city in cities)
+            {
+                _cityRepository.Insert(city);
+            }
         }
 
         public City Update(City city)

@@ -6,10 +6,12 @@
 }
 
 <h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<form asp-action="FetchCities" method="post">
+    <button type="submit" class="btn btn-primary">
+        @Html.AntiForgeryToken()
+        <i class="bi bi-cloud-download"></i> Fetch Cities
+    </button>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -41,7 +43,7 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Country.Id)
+                @Html.DisplayFor(modelItem => item.Country.Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Latitude)

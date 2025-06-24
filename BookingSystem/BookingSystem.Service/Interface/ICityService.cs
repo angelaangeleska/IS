@@ -12,6 +12,7 @@ namespace BookingSystem.Service.Interface
         List<City> GetAll();
         City? GetById(Guid id);
         City Insert(City city);
+        void InsertMany(IEnumerable<City> cities);
         City Update(City city);
         City DeleteById(Guid id);
     }

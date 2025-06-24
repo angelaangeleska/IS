@@ -8,7 +8,6 @@ namespace BookingSystem.Domain.DomainModels
 {
     public enum SizeCategory
     {
-        Unknown,
         Small,
         Medium,
         Large

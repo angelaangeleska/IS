@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace BookingSystem.Domain.DomainModels.DTO
 {
-    public class MetadataDto
+    public class Link
     {
-        [JsonPropertyName("currentOffset")]
-        public int CurrentOffset { get; set; }
+        [JsonPropertyName("rel")]
+        public string Rel { get; set; }
 
-        [JsonPropertyName("totalCount")]
-        public int TotalCount { get; set; }
+        [JsonPropertyName("href")]
+        public string Href { get; set; }
     }
 }
