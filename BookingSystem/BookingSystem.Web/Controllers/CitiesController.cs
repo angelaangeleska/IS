@@ -85,7 +85,6 @@ namespace BookingSystem.Web.Controllers
             {
                 return NotFound();
             }
-
             _cityService.Update(city);
             return RedirectToAction(nameof(Index));
         }

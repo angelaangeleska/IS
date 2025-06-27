@@ -14,5 +14,6 @@ namespace BookingSystem.Service.Interface
         Reservation Insert(Reservation reservation);
         Reservation Update(Reservation reservation);
         Reservation DeleteById(Guid id);
+        Reservation CancelReservation(Guid id);
     }
 }

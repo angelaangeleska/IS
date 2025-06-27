@@ -13,5 +13,6 @@ namespace BookingSystem.Domain.IdentityModels
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public virtual ICollection<Reservation>? Reservations { get; set; }
+        public virtual ICollection<Accommodation>? Accommodations { get; set; }
     }
 }

@@ -44,7 +44,7 @@ namespace BookingSystem.Service.Implementation
                 var request = new HttpRequestMessage
                 {
                     Method = HttpMethod.Get,
-                    RequestUri = new Uri($"https://wft-geo-db.p.rapidapi.com/v1/geo/cities?limit={limit}&offset={maxOffset}&includeDeleted=NONE&minPopulation=80000&types=CITY&&countryIds=AL,AD,AT,BY,BE,BA,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IS,IE,IT,XK,LV,LI,LT,LU,MT,MD,MC,ME,NL,MK,NO,PL,PT,RO,RU,SM,RS,SK,SI,ES,SE,CH,UA,GB,VA"),
+                    RequestUri = new Uri($"https://wft-geo-db.p.rapidapi.com/v1/geo/cities?limit={limit}&offset={offset}&includeDeleted=NONE&minPopulation=80000&types=CITY&&countryIds=AL,AD,AT,BY,BE,BA,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IS,IE,IT,XK,LV,LI,LT,LU,MT,MD,MC,ME,NL,MK,NO,PL,PT,RO,RU,SM,RS,SK,SI,ES,SE,CH,UA,GB,VA"),
                     Headers =
                     {
                         { "x-rapidapi-key", "ae9cc4cc9emsh74fa90f1760528fp102f55jsn95a37886a0c3" },
@@ -117,7 +117,7 @@ namespace BookingSystem.Service.Implementation
 
             var allCountries = new List<Country>();
             const int limit = 10;
-            int maxOffset = 198;  // Set maximum offset to 198
+            int maxOffset = 198;  
 
             for (int offset = 0; offset <= maxOffset; offset += limit)
             {

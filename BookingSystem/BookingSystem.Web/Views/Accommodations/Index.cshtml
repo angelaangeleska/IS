@@ -1,84 +1,110 @@
-﻿@model IEnumerable<BookingSystem.Domain.DomainModels.Accommodation>
+﻿@using System.Security.Claims
+@model BookingSystem.Domain.DomainModels.Pagination.PaginatedList<BookingSystem.Domain.DomainModels.Accommodation>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Accommodations</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.City)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PricePerNight)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Capacity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageUrl)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Rating)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsAvailable)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PricePerNight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Capacity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageUrl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsAvailable)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<form asp-action="Index" method="get" class="mb-4">
+    <div class="row g-3 align-items-center">
+        <div class="col-md-4">
+            <label class="form-label">Filter by City:</label>
+            <select name="cityId" asp-items="ViewBag.CityId" class="form-select">
+                <option value="">All Cities</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary mt-md-4 mt-2">Apply Filter</button>
+        </div>
+        <div class="col-md-6 text-end">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a asp-action="Create" class="btn btn-primary">Create New</a>
+            }
+        </div>
+    </div>
+    <div class="col-md-2">
+        <a asp-action="Index" class="btn btn-outline-secondary mt-md-4 mt-2">Clear Filter</a>
+    </div>
+</form>
+
+<div class="card-grid">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <img src="@item.ImageUrl" class="card-img-top" alt="@item.Name" />
+            <div class="card-body">
+                <h3 class="card-title">@item.Name</h3>
+                <p class="card-text">@item.Description</p>
+                <div class="card-meta">
+                    <span>@item.City.Name</span>
+                    <span>€@item.PricePerNight/night</span>
+                </div>
+                <div class="card-meta">
+                    <span>Capacity: @item.Capacity</span>
+                    <span>Rating: @item.Rating</span>
+                </div>
+                <div class="card-meta">
+                    <span>@item.Address</span>
+                    <span>@(item.IsAvailable ? "Available" : "Booked")</span>
+                </div>
+                <div class="card-actions">
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+
+                    @if (User.Identity.IsAuthenticated && item.CreatedFromUserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    }
+
+                    @if (item.IsAvailable)
+                    {
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-action="MakeReservation" asp-route-id="@item.Id"
+                               class="btn btn-outline-primary">Book now</a>
+                        }
+                        else
+                        {
+                            <a asp-area="Identity" asp-page="/Account/Login"
+                               class="btn btn-outline-primary">Login to Book</a>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="pagination mt-4">
+    @{
+        var cityId = Context.Request.Query["cityId"];
+    }
+
+    <a asp-action="Index"
+       asp-route-pageIndex="@(Model.PageIndex - 1)"
+       asp-route-cityId="@cityId"
+       class="@(!Model.HasPreviousPage ? "disabled" : "")">
+        &laquo;
+    </a>
+
+    @for (int i = 1; i <= Model.TotalPages; i++)
+    {
+        <a asp-action="Index"
+           asp-route-pageIndex="@i"
+           asp-route-cityId="@cityId"
+           class="@(i == Model.PageIndex ? "current" : "")">
+            @i
+        </a>
+    }
+
+    <a asp-action="Index"
+       asp-route-pageIndex="@(Model.PageIndex + 1)"
+       asp-route-cityId="@cityId"
+       class="@(!Model.HasNextPage ? "disabled" : "")">
+        &raquo;
+    </a>
+</div>

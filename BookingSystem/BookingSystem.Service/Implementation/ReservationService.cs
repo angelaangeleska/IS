@@ -1,6 +1,7 @@
 ﻿using BookingSystem.Domain.DomainModels;
 using BookingSystem.Repository.Interface;
 using BookingSystem.Service.Interface;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,31 @@ namespace BookingSystem.Service.Implementation
     public class ReservationService : IReservationService
     {
         private readonly IRepository<Reservation> _reservationRepository;
+        private readonly IRepository<Accommodation> _accommodationService;
 
-        public ReservationService(IRepository<Reservation> reservationRepository)
+        public ReservationService(IRepository<Reservation> reservationRepository, IRepository<Accommodation> accommodationService)
         {
             _reservationRepository = reservationRepository;
+            _accommodationService = accommodationService;
+        }
+
+        public Reservation CancelReservation(Guid id)
+        {
+            var reservation = GetById(id);
+            if (reservation == null)
+            {
+                throw new Exception("Reservation not found");
+            }
+
+            if (reservation.Accommodation == null)
+            {
+                throw new Exception("Accommodation not loaded");
+            }
+
+            reservation.Accommodation.IsAvailable = true;
+            _accommodationService.Update(reservation.Accommodation);
+
+            return reservation;
         }
 
         public Reservation DeleteById(Guid id)
@@ -31,13 +53,17 @@ namespace BookingSystem.Service.Implementation
 
         public List<Reservation> GetAll()
         {
-            return _reservationRepository.GetAll(selector: x => x).ToList();
+            return _reservationRepository.GetAll(selector: x => x, 
+                                                 include: x => x.Include(y => y.User)
+                                                                .Include(y => y.Accommodation))
+                                         .ToList();
         }
 
         public Reservation? GetById(Guid id)
         {
             return _reservationRepository.Get(selector: x => x,
-                                          predicate: x => x.Id.Equals(id));
+                                          predicate: x => x.Id.Equals(id),
+                                          include: x => x.Include(y => y.Accommodation));
         }
 
         public Reservation Insert(Reservation reservation)

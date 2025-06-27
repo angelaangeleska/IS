@@ -1,61 +1,48 @@
 ﻿@model BookingSystem.Domain.DomainModels.Reservation
-
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Reservation Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Reservation</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.User)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.User.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Accommodation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Accommodation.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CheckInDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CheckInDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CheckOutDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CheckOutDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NumberOfGuests)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NumberOfGuests)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedOn)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreatedOn)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TotalPrice)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TotalPrice)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="container">
+    <div class="detail-card">
+        <div class="detail-header">
+            <h1 class="mb-0">@Model.Accommodation.Name</h1>
+            <div class="d-flex align-items-center mt-2">
+                <span class="badge bg-primary me-2">@Model.Accommodation?.City?.Name</span>
+            </div>
+        </div>
+        <div class="detail-body">
+            @if (!string.IsNullOrEmpty(Model.Accommodation.ImageUrl))
+            {
+                <img src="@Model.Accommodation.ImageUrl" class="detail-image" alt="@Model.Accommodation.Name" />
+            }
+            <div class="detail-grid mt-4">
+                <div class="detail-item">
+                    <div class="detail-label">Check-in</div>
+                    <div class="detail-value">@Model.CheckInDate.ToString("d")</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Check-out</div>
+                    <div class="detail-value">@Model.CheckOutDate.ToString("d")</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Guests</div>
+                    <div class="detail-value">@Model.NumberOfGuests</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Total Price</div>
+                    <div class="detail-value">€@Model.TotalPrice.ToString("0.00")</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Booked On</div>
+                    <div class="detail-value">@Model.CreatedOn.ToString("d")</div>
+                </div>
+            </div>
+            <div class="detail-actions">
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn-detail btn-edit">Edit</a>
+                <a asp-action="Index" class="btn-detail btn-back">Back to List</a>
+            </div>
+        </div>
+    </div>
 </div>

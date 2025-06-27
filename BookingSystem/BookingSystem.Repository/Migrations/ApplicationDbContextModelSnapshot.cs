@@ -37,6 +37,9 @@ namespace BookingSystem.Repository.Migrations
                     b.Property<Guid>("CityId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CreatedFromUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
@@ -58,6 +61,8 @@ namespace BookingSystem.Repository.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CityId");
+
+                    b.HasIndex("CreatedFromUserId");
 
                     b.ToTable("Accommodations");
                 });
@@ -361,7 +366,13 @@ namespace BookingSystem.Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("BookingSystem.Domain.IdentityModels.SystemUser", "CreatedFromUser")
+                        .WithMany("Accommodations")
+                        .HasForeignKey("CreatedFromUserId");
+
                     b.Navigation("City");
+
+                    b.Navigation("CreatedFromUser");
                 });
 
             modelBuilder.Entity("BookingSystem.Domain.DomainModels.City", b =>
@@ -455,6 +466,8 @@ namespace BookingSystem.Repository.Migrations
 
             modelBuilder.Entity("BookingSystem.Domain.IdentityModels.SystemUser", b =>
                 {
+                    b.Navigation("Accommodations");
+
                     b.Navigation("Reservations");
                 });
 #pragma warning restore 612, 618

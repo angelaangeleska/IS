@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookingSystem.Domain.IdentityModels;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -20,6 +21,8 @@ namespace BookingSystem.Domain.DomainModels
         public string? ImageUrl { get; set; }
         public double Rating { get; set; }
         public bool IsAvailable { get; set; }
+        public string? CreatedFromUserId { get; set; }
+        public SystemUser? CreatedFromUser { get; set; }
         public virtual ICollection<Reservation>? Reservations { get; set; }
     }
 }

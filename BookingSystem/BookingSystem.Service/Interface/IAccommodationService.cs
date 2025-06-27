@@ -1,4 +1,5 @@
 ﻿using BookingSystem.Domain.DomainModels;
+using BookingSystem.Domain.DomainModels.Pagination;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,6 @@ namespace BookingSystem.Service.Interface
         Accommodation Insert(Accommodation accommodation);
         Accommodation Update(Accommodation accommodation);
         Accommodation DeleteById(Guid id);
+        PaginatedList<Accommodation> GetPaginated(int pageIndex, int pageSize, Guid? cityId = null);
     }
 }

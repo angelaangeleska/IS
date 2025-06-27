@@ -32,13 +32,15 @@ namespace BookingSystem.Service.Implementation
 
         public List<City> GetAll()
         {
-            return _cityRepository.GetAll(selector: x => x, include: query => query.Include(y => y.Country)).ToList();
+            return _cityRepository.GetAll(selector: x => x, 
+                                          include: x => x.Include(y => y.Country)).ToList();
         }
 
         public City? GetById(Guid id)
         {
             return _cityRepository.Get(selector: x => x,
-                                          predicate: x => x.Id.Equals(id));
+                                       predicate: x => x.Id.Equals(id),
+                                       include: x => x.Include(y => y.Country));
         }
 
         public City Insert(City city)
