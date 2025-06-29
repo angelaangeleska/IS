@@ -146,16 +146,70 @@ namespace BookingSystem.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Guid id, [Bind("UserId,AccommodationId,CheckInDate,CheckOutDate,NumberOfGuests,CreatedOn,TotalPrice,Id")] Reservation reservation)
+        public IActionResult Edit(Guid id, DateTime CheckInDate, DateTime CheckOutDate, int NumberOfGuests)
         {
-            if (id != reservation.Id)
+            try
             {
-                return NotFound();
+                // Load the existing reservation with all its data
+                var existingReservation = _reservationService.GetById(id);
+                if (existingReservation == null)
+                {
+                    return NotFound();
+                }
+
+                // Strip time components
+                CheckInDate = CheckInDate.Date;
+                CheckOutDate = CheckOutDate.Date;
+
+                // Validate dates
+                if (CheckInDate >= CheckOutDate)
+                {
+                    ModelState.AddModelError("CheckOutDate", "Check-out date must be after check-in date.");
+                }
+
+                if (CheckInDate < DateTime.Today)
+                {
+                    ModelState.AddModelError("CheckInDate", "Check-in date cannot be in the past.");
+                }
+
+                // Validate guest capacity
+                if (NumberOfGuests > existingReservation.Accommodation.Capacity)
+                {
+                    ModelState.AddModelError("NumberOfGuests", $"Number of guests cannot exceed accommodation capacity of {existingReservation.Accommodation.Capacity}.");
+                }
+
+                if (NumberOfGuests <= 0)
+                {
+                    ModelState.AddModelError("NumberOfGuests", "Number of guests must be at least 1.");
+                }
+
+                if (ModelState.IsValid)
+                {
+                    // Update only the editable fields
+                    existingReservation.CheckInDate = CheckInDate;
+                    existingReservation.CheckOutDate = CheckOutDate;
+                    existingReservation.NumberOfGuests = NumberOfGuests;
+
+                    // Recalculate total price
+                    var nights = (CheckOutDate - CheckInDate).Days;
+                    existingReservation.TotalPrice = existingReservation.Accommodation.PricePerNight * nights;
+
+                    // Update the reservation
+                    _reservationService.Update(existingReservation);
+
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Unable to save changes. Please try again.");
             }
 
-            _reservationService.Update(reservation);
-            return RedirectToAction(nameof(Index));
+            // If we get here, something went wrong, reload the reservation
+            var reservation = _reservationService.GetById(id);
+            return View(reservation);
         }
+
 
         public IActionResult Cancel(Guid id)
         {

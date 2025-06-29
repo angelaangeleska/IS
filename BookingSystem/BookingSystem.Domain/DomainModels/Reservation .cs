@@ -20,14 +20,18 @@ namespace BookingSystem.Domain.DomainModels
         [Required]
         [DataType(DataType.Date)]
         [FutureDate(ErrorMessage = "Check-in must be in the future")]
+        [Display(Name = "Check in date")]
         public DateTime CheckInDate { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
         [DateAfter("CheckInDate", ErrorMessage = "Check-out must be after check-in")]
+        [Display(Name = "Check out date")]
         public DateTime CheckOutDate { get; set; }
+        [Display(Name = "Number of guests")]
         public int NumberOfGuests { get; set; }
         public DateTime CreatedOn { get; set; } = DateTime.Now;
+        [Display(Name = "Total price")]
         public double TotalPrice { get; set; }
     }
 }

@@ -13,9 +13,9 @@ namespace BookingSystem.Service.Implementation
     public class ReservationService : IReservationService
     {
         private readonly IRepository<Reservation> _reservationRepository;
-        private readonly IRepository<Accommodation> _accommodationService;
+        private readonly IAccommodationService _accommodationService;
 
-        public ReservationService(IRepository<Reservation> reservationRepository, IRepository<Accommodation> accommodationService)
+        public ReservationService(IRepository<Reservation> reservationRepository, IAccommodationService accommodationService)
         {
             _reservationRepository = reservationRepository;
             _accommodationService = accommodationService;
@@ -74,7 +74,30 @@ namespace BookingSystem.Service.Implementation
 
         public Reservation Update(Reservation reservation)
         {
-            return _reservationRepository.Update(reservation);
+            var existingReservation = GetById(reservation.Id);
+            if (existingReservation == null)
+            {
+                throw new Exception("Reservation not found");
+            }
+
+            var accommodation = existingReservation.Accommodation
+                ?? _accommodationService.GetById(existingReservation.AccommodationId);
+
+            if (accommodation == null)
+            {
+                throw new Exception("Accommodation not found for this reservation.");
+            }
+
+            if (reservation.NumberOfGuests > accommodation.Capacity)
+            {
+                throw new Exception("Number of guests exceeds accommodation capacity.");
+            }
+
+            existingReservation.CheckInDate = reservation.CheckInDate;
+            existingReservation.CheckOutDate = reservation.CheckOutDate;
+            existingReservation.NumberOfGuests = reservation.NumberOfGuests;
+
+            return _reservationRepository.Update(existingReservation);
         }
     }
 }

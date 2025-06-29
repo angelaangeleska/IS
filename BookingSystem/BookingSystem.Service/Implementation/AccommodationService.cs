@@ -51,7 +51,23 @@ namespace BookingSystem.Service.Implementation
 
         public Accommodation Update(Accommodation accommodation)
         {
-            return _accommodationRepository.Update(accommodation);
+            var existingAccommodation = GetById(accommodation.Id);
+            if (existingAccommodation == null)
+            {
+                throw new Exception("Accommodation not found");
+            }
+
+            existingAccommodation.Name = accommodation.Name;
+            existingAccommodation.Description = accommodation.Description;
+            existingAccommodation.Address = accommodation.Address;
+            existingAccommodation.CityId = accommodation.CityId;
+            existingAccommodation.PricePerNight = accommodation.PricePerNight;
+            existingAccommodation.Capacity = accommodation.Capacity;
+            existingAccommodation.ImageUrl = accommodation.ImageUrl;
+            existingAccommodation.Rating = accommodation.Rating;
+            existingAccommodation.IsAvailable = accommodation.IsAvailable;
+
+            return _accommodationRepository.Update(existingAccommodation);
         }
 
         public PaginatedList<Accommodation> GetPaginated(int pageIndex, int pageSize, Guid? cityId = null)
