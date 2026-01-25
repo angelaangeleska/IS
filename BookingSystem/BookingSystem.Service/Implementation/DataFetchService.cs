@@ -34,17 +34,18 @@ namespace BookingSystem.Service.Implementation
 
             var countryByCode = _countryService.GetAll()
                                                .ToDictionary(c => c.Code, StringComparer.OrdinalIgnoreCase);
+            string euroCodes = string.Join(",", countryByCode.Keys);
 
             var allCities = new List<City>();
             const int limit = 10;
-            int maxOffset = 1526;
+            int maxOffset = 160;
 
             for (int offset = 0; offset <= maxOffset; offset += limit)
             {
                 var request = new HttpRequestMessage
                 {
                     Method = HttpMethod.Get,
-                    RequestUri = new Uri($"https://wft-geo-db.p.rapidapi.com/v1/geo/cities?limit={limit}&offset={offset}&includeDeleted=NONE&minPopulation=80000&types=CITY&&countryIds=AL,AD,AT,BY,BE,BA,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IS,IE,IT,XK,LV,LI,LT,LU,MT,MD,MC,ME,NL,MK,NO,PL,PT,RO,RU,SM,RS,SK,SI,ES,SE,CH,UA,GB,VA"),
+                    RequestUri = new Uri($"https://wft-geo-db.p.rapidapi.com/v1/geo/cities?limit={limit}&offset={offset}&includeDeleted=NONE&minPopulation=400000&types=CITY&&countryIds={euroCodes}"),
                     Headers =
                     {
                         { "x-rapidapi-key", "ae9cc4cc9emsh74fa90f1760528fp102f55jsn95a37886a0c3" },
@@ -95,7 +96,7 @@ namespace BookingSystem.Service.Implementation
                         _cityService.InsertMany(newCities);
                     }
 
-                    await Task.Delay(10000);
+                    await Task.Delay(1500);
                 }
             }
 
@@ -111,67 +112,66 @@ namespace BookingSystem.Service.Implementation
 
         public async Task<List<Country>> FetchCountriesFromApi()
         {
-            var existingCodes = _countryService.GetAll()
-                                               .Select(c => c.Code)
-                                               .ToHashSet(StringComparer.OrdinalIgnoreCase);
+            // Prevent double-seeding
+            if (_countryService.GetAll().Any()) return _countryService.GetAll().ToList();
+
+            // The list of currencies used across the entire European continent
+            var euroCurrencies = new List<string>
+            {
+                "EUR", "GBP", "CHF", "PLN", "HUF", "CZK", "DKK", "SEK", "NOK", // EU & West
+                "MKD", "RSD", "ALL", "BAM", "BGN", "RON", "MDL", "UAH", "BYN"  // Balkans & East
+            };
 
             var allCountries = new List<Country>();
-            const int limit = 10;
-            int maxOffset = 198;  
+            var existingCodes = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
-            for (int offset = 0; offset <= maxOffset; offset += limit)
+            foreach (var currency in euroCurrencies)
             {
-                var request = new HttpRequestMessage
-                {
-                    Method = HttpMethod.Get,
-                    RequestUri = new Uri($"https://wft-geo-db.p.rapidapi.com/v1/geo/countries?limit={limit}&offset={offset}"),
-                    Headers =
-                    {
-                        { "x-rapidapi-key", "ae9cc4cc9emsh74fa90f1760528fp102f55jsn95a37886a0c3" },
-                        { "x-rapidapi-host", "wft-geo-db.p.rapidapi.com" },
-                    },
-                };
+                const int limit = 10;
+                int maxOffset = (currency == "EUR") ? 20 : 0;
 
-                using (var response = await _httpClient.SendAsync(request))
+                for (int offset = 0; offset <= maxOffset; offset += limit)
                 {
-                    response.EnsureSuccessStatusCode();
+                    var request = new HttpRequestMessage
+                    {
+                        Method = HttpMethod.Get,
+                        RequestUri = new Uri($"https://wft-geo-db.p.rapidapi.com/v1/geo/countries?limit={limit}&offset={offset}&currencyCode={currency}"),
+                        Headers =
+                        {
+                            { "x-rapidapi-key", "ae9cc4cc9emsh74fa90f1760528fp102f55jsn95a37886a0c3" },
+                            { "x-rapidapi-host", "wft-geo-db.p.rapidapi.com" },
+                        },
+                    };
+
+                    using var response = await _httpClient.SendAsync(request);
+                    if (!response.IsSuccessStatusCode) break;
+
                     var body = await response.Content.ReadAsStringAsync();
                     var apiResponse = JsonSerializer.Deserialize<GeoApiResponse>(body);
 
-                    if (apiResponse?.Data == null || !apiResponse.Data.Any())
-                        break;
+                    if (apiResponse?.Data == null || !apiResponse.Data.Any()) break;
 
                     var newCountries = apiResponse.Data
                         .Where(dto => !existingCodes.Contains(dto.Code))
                         .Select(dto => new Country
                         {
                             Name = dto.Name,
-                            CurrencyName = dto.CurrencyCodes?.FirstOrDefault(),
-                            Code = dto.Code
-                        })
-                        .ToList();
-
-                    // Update cache to prevent duplicates
-                    foreach (var country in newCountries)
-                    {
-                        existingCodes.Add(country.Code);
-                    }
-
-                    allCountries.AddRange(newCountries);
+                            Code = dto.Code,
+                            CurrencyName = currency
+                        }).ToList();
 
                     if (newCountries.Any())
                     {
                         _countryService.InsertMany(newCountries);
+                        foreach (var c in newCountries) existingCodes.Add(c.Code);
+                        allCountries.AddRange(newCountries);
                     }
 
-                    // Respect API rate limits (1 request/second)
-                    await Task.Delay(10000);
+                    // Respecting rate limits while keeping things moving
+                    await Task.Delay(1500);
                 }
             }
-
             return allCountries;
         }
-
-
     }
 }
