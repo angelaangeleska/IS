@@ -30,7 +30,7 @@ namespace BookingSystem.Domain.DomainModels
         public DateTime CheckOutDate { get; set; }
         [Display(Name = "Number of guests")]
         public int NumberOfGuests { get; set; }
-        public DateTime CreatedOn { get; set; } = DateTime.Now;
+        public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
         [Display(Name = "Total price")]
         public double TotalPrice { get; set; }
     }

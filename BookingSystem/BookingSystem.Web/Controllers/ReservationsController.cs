@@ -88,7 +88,7 @@ namespace BookingSystem.Web.Controllers
             reservation.CheckOutDate = reservation.CheckOutDate.Date;
 
             reservation.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            reservation.CreatedOn = DateTime.Now;
+            reservation.CreatedOn = DateTime.UtcNow;
             reservation.AccommodationId = accommodationId;
 
             var accommodation = _accommodationService.GetById(accommodationId);
